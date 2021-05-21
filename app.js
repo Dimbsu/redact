@@ -183,27 +183,27 @@ async function create_redaction(pdffile) {
     await search_redact(codeform1);
     await search_redact(codeform2);
 
-//patern numero permis de conduire
-    const permis = /[1-9]{2}[ .]{0,1}(?:1[0-2]|0[0-9]{1})[ .]{0,1}[0-9]{2}[ .]{0,1}[0-9]{2}[ .]{0,1}[0-9]{4}/g
-    await search_redact(permis);
-//patern numero CIN
-    const cin = /[0-9]{2}[.](?:1[0-2]|0[0-9]{1})[.](?:3[0-1]|0[1-9]{1}|2[0-9]{1})-[0-9]{3}[.][0-9]{2}/g
-    await search_redact(cin);
-//identificaiton employer
-    const employer = /\b(?:[1-9]{1}[0-9]{11})\b/g
-    await search_redact(employer);
-//identification passport
-    const passport = /\b(?:[A-Z]{2}[0-9]{6})\b/g
-    await search_redact(passport);
-//numero voiture
-    const numVoiture = /\b(?:[1-8]{1}[-][A-Y]{1}[A-Z]{2}[-][0-9]{3})\b/g
-    await search_redact(numVoiture);
-//NIV voiture
-    const nivVehicule = /\b(?:(?:[0-9]|[A-H]|[J-N]|[P]|[R-Z]){8}(?:[0-9]|[X]){1}(?:[1-9]|[A-H]|[J-N]|[P]|[R-T]|[V-Y]){1}(?:[0-9]|[A-H]|[J-N]|[P]|[R-Z]){1}[0-9]{6})\b/g
-    await search_redact(nivVehicule);
-//url patern
-    let url_patern = "(?:[https:\/\/www.|http:\/\/www.|https:\/\/|http:\/\/|www]+[.]+[a-zA-Z0-9._%+-\/]+[a-zA-Z0-9._%+-])"
-    await search_redact(url_patern);
+// //patern numero permis de conduire
+//     const permis = /[1-9]{2}[ .]{0,1}(?:1[0-2]|0[0-9]{1})[ .]{0,1}[0-9]{2}[ .]{0,1}[0-9]{2}[ .]{0,1}[0-9]{4}/g
+//     await search_redact(permis);
+// //patern numero CIN
+//     const cin = /[0-9]{2}[.](?:1[0-2]|0[0-9]{1})[.](?:3[0-1]|0[1-9]{1}|2[0-9]{1})-[0-9]{3}[.][0-9]{2}/g
+//     await search_redact(cin);
+// //identificaiton employer
+//     const employer = /\b(?:[1-9]{1}[0-9]{11})\b/g
+//     await search_redact(employer);
+// //identification passport
+//     const passport = /\b(?:[A-Z]{2}[0-9]{6})\b/g
+//     await search_redact(passport);
+// //numero voiture
+//     const numVoiture = /\b(?:[1-8]{1}[-][A-Y]{1}[A-Z]{2}[-][0-9]{3})\b/g
+//     await search_redact(numVoiture);
+// //NIV voiture
+//     const nivVehicule = /\b(?:(?:[0-9]|[A-H]|[J-N]|[P]|[R-Z]){8}(?:[0-9]|[X]){1}(?:[1-9]|[A-H]|[J-N]|[P]|[R-T]|[V-Y]){1}(?:[0-9]|[A-H]|[J-N]|[P]|[R-Z]){1}[0-9]{6})\b/g
+//     await search_redact(nivVehicule);
+// //url patern
+//     let url_patern = "(?:[https:\/\/www.|http:\/\/www.|https:\/\/|http:\/\/|www]+[.]+[a-zA-Z0-9._%+-\/]+[a-zA-Z0-9._%+-])"
+//     await search_redact(url_patern);
 
    
     //patern pour une ville a belge

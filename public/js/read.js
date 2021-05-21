@@ -35,5 +35,5 @@
     }, 1000);
 })();
 const returnToIndex = function() {
-    return window.open('/download')
+    return window.location.href('/')
 }
